@@ -1,0 +1,48 @@
+---
+title: "Incarceration Population Analysis in California"
+author: "Athena Le"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = T, echo = FALSE, warning = FALSE, message = F}
+source("../source/analysis.R")
+```
+
+## Introduction + Summary Information
+
+The Incarceration Trends data was released in December, 2015 by Vera Institute of Justice. The dataset covers more information that other data collections (e.g. the Census of Jails and the Annual Survey of Jails) do not cover. Unlike other data collections, the Incarceration Trends data provides county-level data to help county-officials and researchers analyze data more effectively and study the rates of incarceration in the United States. 
+
+I decided to look into the state with the highest jail population and from there, I narrowed down my focus. I found that California had the highest jail population: 26,409,845 people. Then, I looked at how many people per race were in jail. I found that there were 4,337,124 American American/Pacific Islanders, 1,683,107 Black people, 10,477,829 Latinx people, 139,961 Native Americans, and 9,771,824 White people in jail. I did not realize that there were a lot of Latinx people in jail. I did a little more research outside of the dataset to find out why; according to the Public Policy Institute of California, 39% of state residents in California are Latinx and 35% are White. This would relate to how Latinx and White people are the top two races to be in jail in California. 
+
+## Statistics
+### Trend Chart
+
+This trend chart, Incarcerated Population by Races in CA, aims to show how many people per race gets incarcerated over time. I wanted to see if the number of people incarcerated would fluctuate even if the White and Latinx population make up of the top two races of California residents. I was also curious to see if the Black population had a high number of incarceration because during the Black Lives Matter movement, many would talk about how many Black people were incarcerated. However, I also do realize that I am only looking at the data from California. 
+
+From this chart, we can see that the number of Latinx and Asian American/Pacific Islander (AAPI) population that are incarcerated increases over time while the number of White people incarcerated slowly decreases over time. Native American and Black population stays consistent over time. 
+
+```{r, include = T, echo = F, warning = F, message = F}
+plot(plot_1)
+```
+
+### Comparison Chart
+
+The comparison chart, Races in Jail Rated Capacity in California, compares the jail rated capacity with the races incarcerated. I wanted to see if jails with a higher capacity would rather pick certain races to be in there and vice versa. From this chart, we do not see a huge correlation between both variables. It shows us that when the Latinx population is high, they tend to be put in jails that have a high rated capacity. It seems that the race does not matter when it comes to the capacity of jails.  
+
+```{r, include = T, echo = F, warning = F, message = F}
+plot(plot_2)
+```
+
+### Map
+
+The map, California County Jail Population, aims to see the county with the highest jail population. I wanted to see what county had the highest jail population. From this map, the LA county had the highest jail population of 17208. 
+
+```{r, include = T, echo = F}
+plot(plot_3)
+```
+
+
